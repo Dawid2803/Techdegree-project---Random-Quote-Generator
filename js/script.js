@@ -34,6 +34,20 @@ console.log(getRandomQuote(quotes));
 /***
  * `printQuote` function
 ***/
+function printQuote(){
+	let randomquote = getRandomQuote(quotes);
+	let quoteToHTML = `
+	<p>${randomquote.quote}</p>
+	<p>${randomquote.source}`;
+	if (randomquote.citation){
+		randomquote += `<span>${randomquote.citation}</span>`;
+		}
+	if(randomquote.year){
+		randomquote += `<span>${randomquote.year}</span>`;
+	}
+	randomquote += `</p>`;
+	return document.getElementById('quote-box').innerHTML = quoteToHTML;
+}
 
 
 

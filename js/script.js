@@ -8,8 +8,7 @@ project 1 - A Random Quote Generator
   // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
 /*** 
- * `quotes` array 
-	The quotes array consists of different objects along with their properties.
+ 	The quotes array consists of different objects along with their properties.
 ***/
 const quotes = [
 	{ quote: "I nearly had Everything!" , source: "Thomas Shelby", citation: "Peaky Blinders" },	
@@ -20,7 +19,6 @@ const quotes = [
 ]
 
 /***
- * `getRandomQuote` function
 	This function will use a random number to pick one of the quotes available in the quotes array.
 ***/ 
 function getRandomQuote(quoteArray){
@@ -31,7 +29,6 @@ function getRandomQuote(quoteArray){
 
 
 /***
- * `printQuote` function
 	This function will print the randomly chosen quote to the screen.
 ***/
 function printQuote(){

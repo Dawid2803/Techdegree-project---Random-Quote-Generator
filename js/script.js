@@ -19,10 +19,14 @@ const quotes = [
 ]
 
 /***
-	This function will use a random number to pick one of the quotes available in the quotes array.
+	This function will use a random number to pick one of the quotes available in the quotes array, it will also choose a random color for the background.
 ***/ 
 function getRandomQuote(quoteArray){
 	let randomNumber = Math.floor(Math.random() * quoteArray.length);
+
+	const color =  `rgb(${ Math.floor(Math.random() * 255)}, ${ Math.floor(Math.random() * 255)}, ${ Math.floor(Math.random() * 255)})`;
+
+	document.body.style.backgroundColor = color;
 	return quoteArray[randomNumber];
 
 }
@@ -48,8 +52,8 @@ function printQuote(){
 	quoteToHTML += `</p>`;
 	return document.getElementById('quote-box').innerHTML = quoteToHTML;
 }
-
-
+// This function is used to change the quote every 10 seconds without pressing the change quote button//
+setInterval(printQuote, 10000);
 
 /***
  * click event listener for the print quote button
